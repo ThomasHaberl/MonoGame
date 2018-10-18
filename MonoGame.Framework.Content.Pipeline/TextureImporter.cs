@@ -104,7 +104,7 @@ namespace Microsoft.Xna.Framework.Content.Pipeline
             var blueMask = FreeImage.GetBlueMask(fBitmap);
 
             // Create the byte array for the data
-            byte[] bytes = new byte[((width * height * bpp - 1) / 8) + 1];
+            byte[] bytes = new byte[pitch * height];
 
             //Converts the pixel data to bytes, do not try to use this call to switch the color channels because that only works for 16bpp bitmaps
             FreeImage.ConvertToRawBits(bytes, fBitmap, pitch, bpp, redMask, greenMask, blueMask, true);
@@ -120,6 +120,19 @@ namespace Microsoft.Xna.Framework.Content.Pipeline
                     break;
                 case FREE_IMAGE_TYPE.FIT_RGBAF:
                     face = new PixelBitmapContent<Vector4>(width, height);
+                    break;
+                case FREE_IMAGE_TYPE.FIT_UINT16:
+                    // XNA does not have an R16 format. --> Duplicate R channel and use Rg32.
+                    var bytesRg32 = new byte[bytes.Length * 2];
+                    for (int i = 0; i < bytes.Length; i += 2)
+                    {
+                        bytesRg32[i * 2 + 0] = bytes[i];
+                        bytesRg32[i * 2 + 1] = bytes[i + 1];
+                        bytesRg32[i * 2 + 2] = bytes[i];
+                        bytesRg32[i * 2 + 3] = bytes[i + 1];
+                    }
+                    bytes = bytesRg32;
+                    face = new PixelBitmapContent<Rg32>(width, height);
                     break;
             }
             FreeImage.UnloadEx(ref fBitmap);
@@ -143,6 +156,7 @@ namespace Microsoft.Xna.Framework.Content.Pipeline
 
                 case FREE_IMAGE_TYPE.FIT_RGBAF:
                 case FREE_IMAGE_TYPE.FIT_RGBA16:
+                case FREE_IMAGE_TYPE.FIT_UINT16:
                     break;
 
                 // Add an alpha channel to BGRA images without one
