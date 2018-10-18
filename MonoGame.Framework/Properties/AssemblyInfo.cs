@@ -19,12 +19,11 @@ using System.Resources;
 
 // Allow the content pipeline assembly to access
 // some of our internal helper methods that it needs.
-[assembly: InternalsVisibleTo("MonoGame.Framework.Content.Pipeline")]
-[assembly: InternalsVisibleTo("MonoGame.Framework.Net")]
+[assembly: InternalsVisibleTo("MonoGame.Framework.Content.Pipeline,PublicKey=0024000004800000940000000602000000240000525341310004000001000100838ccbe04d2a10c7c38c186718cd9d78463c470301c4bf21b44e3c0f36f13a787ef682afdb3302baef9f1d08e79b90b980655dc238acf83cd645d72b2ac9f07a1a3f73c6f3e378ce4155ed2e12b425c02769488df9b085d767905aeb08cecf9dd3894541c871e692b7d38019e42a453e96f0d9daa969aed5307190a2312a0ee5")]
+[assembly: InternalsVisibleTo("MonoGame.Framework.Net,PublicKey=0024000004800000940000000602000000240000525341310004000001000100838ccbe04d2a10c7c38c186718cd9d78463c470301c4bf21b44e3c0f36f13a787ef682afdb3302baef9f1d08e79b90b980655dc238acf83cd645d72b2ac9f07a1a3f73c6f3e378ce4155ed2e12b425c02769488df9b085d767905aeb08cecf9dd3894541c871e692b7d38019e42a453e96f0d9daa969aed5307190a2312a0ee5")]
 
 //Tests projects need access too
-[assembly: InternalsVisibleTo("MonoGameTests")]
-
+[assembly: InternalsVisibleTo("MonoGameTests,PublicKey=0024000004800000940000000602000000240000525341310004000001000100838ccbe04d2a10c7c38c186718cd9d78463c470301c4bf21b44e3c0f36f13a787ef682afdb3302baef9f1d08e79b90b980655dc238acf83cd645d72b2ac9f07a1a3f73c6f3e378ce4155ed2e12b425c02769488df9b085d767905aeb08cecf9dd3894541c871e692b7d38019e42a453e96f0d9daa969aed5307190a2312a0ee5")]
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
 // COM, set the ComVisible attribute to true on that type.
