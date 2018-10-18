@@ -60,6 +60,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\SharpDX\Source\SharpDX.MediaFoundation\bin\Release\net45\SharpDX.MediaFoundation.dll</HintPath>
     </Reference>
+    <Reference Include="SharpDX.RawInput, Version=2.6.3.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SharpDX\Source\SharpDX.RawInput\bin\Release\net45\SharpDX.RawInput.dll</HintPath>
+    </Reference>
     <Reference Include="SharpDX.XAudio2, Version=2.6.3.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\SharpDX\Source\SharpDX.XAudio2\bin\Release\net45\SharpDX.XAudio2.dll</HintPath>
