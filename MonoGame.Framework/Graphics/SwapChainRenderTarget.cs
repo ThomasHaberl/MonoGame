@@ -19,6 +19,7 @@ namespace Microsoft.Xna.Framework.Graphics
     /// </remarks>
     public class SwapChainRenderTarget : RenderTarget2D
     {
+        private IntPtr _windowHandle;
         private SwapChain _swapChain;
 
         public PresentInterval PresentInterval;
@@ -62,14 +63,22 @@ namespace Microsoft.Xna.Framework.Graphics
                 usage,
                 SurfaceType.SwapChainRenderTarget)
         {
-            var dxgiFormat = surfaceFormat == SurfaceFormat.Color
+            _windowHandle = windowHandle;
+            PresentInterval = presentInterval;
+            CreateOrResize(width, height);
+        }
+
+
+        private void CreateOrResize(int width, int height)
+        {
+            var dxgiFormat = Format == SurfaceFormat.Color
                              ? SharpDX.DXGI.Format.B8G8R8A8_UNorm
-                             : SharpDXHelper.ToFormat(surfaceFormat);
+                             : SharpDXHelper.ToFormat(Format);
 
             var multisampleDesc = new SampleDescription(1, 0);
-            if (preferredMultiSampleCount > 1)
+            if (MultiSampleCount > 1)
             {
-                multisampleDesc.Count = preferredMultiSampleCount;
+                multisampleDesc.Count = MultiSampleCount;
                 multisampleDesc.Quality = (int)StandardMultisampleQualityLevels.StandardMultisamplePattern;
             }
 
@@ -83,19 +92,17 @@ namespace Microsoft.Xna.Framework.Graphics
                     Height = height,
                 },
 
-                OutputHandle = windowHandle,
+                OutputHandle = _windowHandle,
                 SampleDescription = multisampleDesc,
                 Usage = Usage.RenderTargetOutput,
                 BufferCount = 2,
-                SwapEffect = SharpDXHelper.ToSwapEffect(presentInterval),
+                SwapEffect = SharpDXHelper.ToSwapEffect(PresentInterval),
                 IsWindowed = true,
             };
 
-            PresentInterval = presentInterval;
-
             // Once the desired swap chain description is configured, it must 
             // be created on the same adapter as our D3D Device
-            var d3dDevice = graphicsDevice._d3dDevice;
+            var d3dDevice = GraphicsDevice._d3dDevice;
 
             // First, retrieve the underlying DXGI Device from the D3D Device.
             // Creates the swap chain 
@@ -119,9 +126,9 @@ namespace Microsoft.Xna.Framework.Graphics
             _texture = backBuffer;
 
             // Create the depth buffer if we need it.
-            if (depthFormat != DepthFormat.None)
+            if (DepthStencilFormat != DepthFormat.None)
             {
-                dxgiFormat = SharpDXHelper.ToFormat(depthFormat);
+                dxgiFormat = SharpDXHelper.ToFormat(DepthStencilFormat);
 
                 // Allocate a 2-D surface as the depth/stencil buffer.
                 using (
@@ -141,6 +148,20 @@ namespace Microsoft.Xna.Framework.Graphics
                     // Create a DepthStencil view on this surface to use on bind.
                     _depthStencilView = new DepthStencilView(d3dDevice, depthBuffer);
             }
+        }
+
+        /// <summary>
+        /// Resizes the swap chain.
+        /// </summary>
+        /// <param name="width">
+        /// The new width of the game window in pixels or the actual width of the swap chain panel.
+        /// </param>
+        /// <param name="height">
+        /// The new height of the game window in pixels or the actual height of the swap chain panel.
+        /// </param>
+        public void Resize(int width, int height)
+        {
+            CreateOrResize(width, height);
         }
 
 
