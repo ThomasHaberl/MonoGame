@@ -685,6 +685,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <CompileFxToMGFX Include="Graphics\Effect\Resources\AlphaTestEffect.fx" />
+    <CompileFxToMGFX Include="Graphics\Effect\Resources\BasicEffect.fx" />
+    <None Include="Graphics\Effect\Resources\Common.fxh" />
+    <None Include="Graphics\Effect\Resources\CompileFxToMGFX.targets" />
+    <CompileFxToMGFX Include="Graphics\Effect\Resources\DualTextureEffect.fx" />
+    <CompileFxToMGFX Include="Graphics\Effect\Resources\EnvironmentMapEffect.fx" />
+    <None Include="Graphics\Effect\Resources\Lighting.fxh" />
+    <None Include="Graphics\Effect\Resources\Macros.fxh" />
+    <None Include="Graphics\Effect\Resources\RebuildMGFX.bat" />
+    <CompileFxToMGFX Include="Graphics\Effect\Resources\SkinnedEffect.fx" />
+    <CompileFxToMGFX Include="Graphics\Effect\Resources\SpriteEffect.fx" />
+    <None Include="Graphics\Effect\Resources\Structures.fxh" />
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="Graphics\Effect\Resources\AlphaTestEffect.dx11.mgfxo">
       <Services>DirectXGraphics</Services>
     </EmbeddedResource>
@@ -718,6 +732,7 @@
   <ItemGroup />
   <ItemGroup />
   <ItemGroup />
+  <Import Project="Graphics\Effect\Resources\CompileFxToMGFX.targets" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <_PostBuildHookTimestamp>@(IntermediateAssembly->'%(FullPath).timestamp')</_PostBuildHookTimestamp>

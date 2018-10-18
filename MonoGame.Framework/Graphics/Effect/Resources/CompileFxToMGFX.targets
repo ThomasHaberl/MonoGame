@@ -1,0 +1,57 @@
+<Project ToolsVersion="4.0"  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Define the name to add to the Build Action property in Visual Studio -->
+  <ItemGroup>
+    <AvailableItemName Include="CompileFxToMGFX" />
+  </ItemGroup>
+
+  <!-- Obtain the list of .fx files to compile (all files with their Build Action set to CompileFxToMGFX) -->
+  <ItemGroup>
+    <FxFilesToCompile Include="@(CompileFxToMGFX)"/>
+  </ItemGroup>
+
+  <!-- Obtain the list of compiled .mgfxo files to be deleted when cleaning -->
+  <ItemGroup>
+    <CompiledFiles Include="$(MSBuildThisFileDirectory)*.mgfxo"/>
+  </ItemGroup>
+  
+  
+  <!-- Some global properties for easier later use -->
+  <PropertyGroup>
+    
+    <!-- The path to the compiler executable -->
+    <CompilerExe>$(MSBuildProjectDirectory)\..\Tools\2MGFX\bin\Windows\AnyCPU\Release\2MGFX.exe</CompilerExe>
+
+    <!-- The target directory for the compiled MGFX files -->
+    <CompilerTargetDir>$(MSBuildThisFileDirectory)</CompilerTargetDir>
+
+    <!-- The options to provide as arguments to the compiler -->
+    <CompilerOptionsDirectX11>/Profile:DirectX_11</CompilerOptionsDirectX11>
+    <CompilerOptionsOpenGL></CompilerOptionsOpenGL>
+    
+  </PropertyGroup>
+
+
+  <!-- Main targets: Compile the .fx files for DirectX 11 and OpenGL. Also provides incremental build: only .fx files that have changed will be recompiled.
+    BeforeTargets: This step is performed before other build steps of the project to ensure output files are already available when they are to be embedded into the final .dll
+    Inputs: All the files with Build Action set to CompileFxToMGFX
+    Outputs: All the output filenames transformed from the input filename list
+    Condition: Performed only if there is at least one .fx file specified
+  -->
+  <Target Name="CompileForDirectX11" BeforeTargets="BeforeBuild" Inputs="@(FxFilesToCompile)" Outputs="@(FxFilesToCompile->'$(CompilerTargetDir)\%(Filename).dx11.mgfxo')" Condition="@(FxFilesToCompile)!=''">
+    <Message Importance="High" Text="Compiling fx files for DirectX 11..." />
+    <MakeDir Directories="$(CompilerTargetDir)" Condition="!Exists(@(CompilerTargetDir))"/>
+    <Exec Command="&quot;$(CompilerExe)&quot; &quot;%(FxFilesToCompile.FullPath)&quot; &quot;$(CompilerTargetDir)\%(FxFilesToCompile.FileName).dx11.mgfxo&quot; $(CompilerOptionsDirectX11)"/>
+  </Target>
+  <Target Name="CompileForOpenGL" BeforeTargets="BeforeBuild" Inputs="@(FxFilesToCompile)" Outputs="@(FxFilesToCompile->'$(CompilerTargetDir)\%(Filename).ogl.mgfxo')" Condition="@(FxFilesToCompile)!=''">
+    <Message Importance="High" Text="Compiling fx files for OpenGL..." />
+    <MakeDir Directories="$(CompilerTargetDir)" Condition="!Exists(@(CompilerTargetDir))"/>
+    <Exec Command="&quot;$(CompilerExe)&quot; &quot;%(FxFilesToCompile.FullPath)&quot; &quot;$(CompilerTargetDir)\%(FxFilesToCompile.FileName).ogl.mgfxo&quot; $(CompilerOptionsOpenGL)"/>
+  </Target>
+
+  <!-- CleanOutput target: Remove the compiled files when the project is cleaned -->
+  <Target Name="CleanOutput" BeforeTargets="Clean">
+    <Delete Files="@(CompiledFiles)" />
+  </Target>
+
+</Project>
