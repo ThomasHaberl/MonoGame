@@ -1143,67 +1143,67 @@
       <Link>ffmpeg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="..\ThirdParty\Dependencies\NVTT\MacOS\libnvtt.dylib">
+    <None Include="..\ThirdParty\NVTT\MacOS\libnvtt.dylib">
       <Platforms>Linux</Platforms>
       <Link>libnvtt.dylib</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\ThirdParty\Dependencies\NVTT\MacOS\libnvcore.dylib">
+    <None Include="..\ThirdParty\NVTT\MacOS\libnvcore.dylib">
       <Platforms>Linux</Platforms>
       <Link>libnvcore.dylib</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\ThirdParty\Dependencies\NVTT\MacOS\libnvimage.dylib">
+    <None Include="..\ThirdParty\NVTT\MacOS\libnvimage.dylib">
       <Platforms>Linux</Platforms>
       <Link>libnvimage.dylib</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\ThirdParty\Dependencies\NVTT\MacOS\libnvmath.dylib">
+    <None Include="..\ThirdParty\NVTT\MacOS\libnvmath.dylib">
       <Platforms>Linux</Platforms>
       <Link>libnvmath.dylib</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\ThirdParty\Dependencies\NVTT\Nvidia.TextureTools.dll">
+    <None Include="..\ThirdParty\NVTT\Nvidia.TextureTools.dll">
       <Platforms>Linux</Platforms>
       <Link>Nvidia.TextureTools.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\ThirdParty\Dependencies\NVTT\Nvidia.TextureTools.dll.config">
+    <None Include="..\ThirdParty\NVTT\Nvidia.TextureTools.dll.config">
       <Platforms>Linux</Platforms>
       <Link>Nvidia.TextureTools.dll.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\ThirdParty\Dependencies\FreeImage.NET\FreeImageNET.dll">
+    <None Include="..\ThirdParty\FreeImage.NET\FreeImageNET.dll">
       <Platforms>Linux</Platforms>
       <Link>FreeImageNET.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\ThirdParty\Dependencies\FreeImage.NET\FreeImageNET.dll.config">
+    <None Include="..\ThirdParty\FreeImage.NET\FreeImageNET.dll.config">
       <Platforms>Linux</Platforms>
       <Link>FreeImageNET.dll.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\ThirdParty\Dependencies\FreeImage.NET\MacOS\libfreeimage.dylib">
+    <None Include="..\ThirdParty\FreeImage.NET\MacOS\libfreeimage.dylib">
       <Platforms>Linux</Platforms>
       <Link>libfreeimage.dylib</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\ThirdParty\Dependencies\PVRTexLibNET\PVRTexLibNET.dll">
+    <None Include="..\ThirdParty\PVRTexLibNET\PVRTexLibNET.dll">
       <Platforms>Linux</Platforms>
       <Link>PVRTexLibNET.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\ThirdParty\Dependencies\PVRTexLibNET\PVRTexLibNET.dll.config">
+    <None Include="..\ThirdParty\PVRTexLibNET\PVRTexLibNET.dll.config">
       <Platforms>Linux</Platforms>
       <Link>PVRTexLibNET.dll.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\ThirdParty\Dependencies\PVRTexLibNET\OSX\x86\libPVRTexLibWrapper.dylib">
+    <None Include="..\ThirdParty\PVRTexLibNET\OSX\x86\libPVRTexLibWrapper.dylib">
       <Platforms>Linux</Platforms>
       <Link>libPVRTexLibWrapper.dylib</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\ThirdParty\Dependencies\assimp\libassimp.dylib">
+    <None Include="..\ThirdParty\assimp\libassimp.dylib">
       <Platforms>Linux</Platforms>
       <Link>libassimp.dylib</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

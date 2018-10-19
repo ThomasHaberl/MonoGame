@@ -46,6 +46,10 @@
     <AssemblyOriginatorKeyFile>..\MonoGame.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AssimpNet, Version=3.3.1.0, Culture=neutral, PublicKeyToken=0d51b391f59f42a6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\assimp\AssimpNet.dll</HintPath>
+    </Reference>
     <Reference Include="ATI.TextureConverter, Version=1.0.5522.26319, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ThirdParty\ATI.TextureConverter\ATI.TextureConverter.dll</HintPath>
@@ -82,9 +86,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="AssimpNet">
-      <HintPath>..\ThirdParty\Dependencies\assimp\AssimpNet.dll</HintPath>
-    </Reference>
     <Reference Include="SharpFont">
       <HintPath>..\ThirdParty\Dependencies\SharpFont\Windows\x64\SharpFont.dll</HintPath>
     </Reference>
@@ -502,12 +503,12 @@
   <ItemGroup />
   <ItemGroup />
   <ItemGroup>
-    <None Include="..\ThirdParty\Dependencies\NVTT\Windows\nvtt.dll">
+    <None Include="..\ThirdParty\NVTT\Windows\nvtt.dll">
       <Link>nvtt.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
     </None>
-    <None Include="..\ThirdParty\Dependencies\assimp\Assimp64.dll">
+    <None Include="..\ThirdParty\assimp\Assimp64.dll">
       <Link>Assimp64.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
@@ -522,7 +523,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
     </None>
-    <None Include="..\ThirdParty\Dependencies\FreeImage.NET\Windows\FreeImage.dll">
+    <None Include="..\ThirdParty\FreeImage.NET\Windows\FreeImage.dll">
       <Link>FreeImage.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
@@ -537,7 +538,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
     </None>
-    <None Include="..\ThirdParty\Dependencies\PVRTexLibNET\Windows\x64\PVRTexLibWrapper.dll">
+    <None Include="..\ThirdParty\PVRTexLibNET\Windows\x64\PVRTexLibWrapper.dll">
       <Link>PVRTexLibWrapper.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>

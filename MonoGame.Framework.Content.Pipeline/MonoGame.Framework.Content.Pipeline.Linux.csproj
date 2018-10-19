@@ -49,22 +49,22 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="AssimpNet">
-      <HintPath>..\ThirdParty\Dependencies\assimp\AssimpNet.dll</HintPath>
+      <HintPath>..\ThirdParty\assimp\AssimpNet.dll</HintPath>
     </Reference>
     <Reference Include="Nvidia.TextureTools">
-      <HintPath>..\ThirdParty\Dependencies\NVTT\Nvidia.TextureTools.dll</HintPath>
+      <HintPath>..\ThirdParty\NVTT\Nvidia.TextureTools.dll</HintPath>
     </Reference>
     <Reference Include="SharpFont">
       <HintPath>..\ThirdParty\Dependencies\SharpFont\x32\SharpFont.dll</HintPath>
     </Reference>
     <Reference Include="FreeImageNET">
-      <HintPath>..\ThirdParty\Dependencies\FreeImage.NET\FreeImageNET.dll</HintPath>
+      <HintPath>..\ThirdParty\FreeImage.NET\FreeImageNET.dll</HintPath>
     </Reference>
     <Reference Include="PVRTexLibNET">
-      <HintPath>..\ThirdParty\Dependencies\PVRTexLibNET\PVRTexLibNET.dll</HintPath>
+      <HintPath>..\ThirdParty\PVRTexLibNET\PVRTexLibNET.dll</HintPath>
     </Reference>
     <Reference Include="ATI.TextureConverter">
-      <HintPath>..\ThirdParty\Dependencies\ATI.TextureConverter\ATI.TextureConverter.dll</HintPath>
+      <HintPath>..\ThirdParty\ATI.TextureConverter\ATI.TextureConverter.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -348,32 +348,32 @@
   <ItemGroup />
   <ItemGroup />
   <ItemGroup>
-    <None Include="..\ThirdParty\Dependencies\assimp\libassimp.so">
+    <None Include="..\ThirdParty\assimp\libassimp.so">
       <Link>libassimp.so</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
     </None>
-    <None Include="..\ThirdParty\Dependencies\NVTT\Linux\libnvcore.so">
+    <None Include="..\ThirdParty\NVTT\Linux\libnvcore.so">
       <Link>libnvcore.so</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
     </None>
-    <None Include="..\ThirdParty\Dependencies\NVTT\Linux\libnvimage.so">
+    <None Include="..\ThirdParty\NVTT\Linux\libnvimage.so">
       <Link>libnvimage.so</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
     </None>
-    <None Include="..\ThirdParty\Dependencies\NVTT\Linux\libnvmath.so">
+    <None Include="..\ThirdParty\NVTT\Linux\libnvmath.so">
       <Link>libnvmath.so</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
     </None>
-    <None Include="..\ThirdParty\Dependencies\NVTT\Linux\libnvtt.so">
+    <None Include="..\ThirdParty\NVTT\Linux\libnvtt.so">
       <Link>libnvtt.so</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
     </None>
-    <None Include="..\ThirdParty\Dependencies\NVTT\Nvidia.TextureTools.dll.config">
+    <None Include="..\ThirdParty\NVTT\Nvidia.TextureTools.dll.config">
       <Link>Nvidia.TextureTools.dll.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
@@ -383,17 +383,17 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
     </None>
-    <None Include="..\ThirdParty\Dependencies\assimp\AssimpNet.dll.config">
+    <None Include="..\ThirdParty\assimp\AssimpNet.dll.config">
       <Link>AssimpNet.dll.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
     </None>
-    <None Include="..\ThirdParty\Dependencies\FreeImage.NET\FreeImageNET.dll.config">
+    <None Include="..\ThirdParty\FreeImage.NET\FreeImageNET.dll.config">
       <Link>FreeImageNET.dll.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
     </None>
-    <None Include="..\ThirdParty\Dependencies\FreeImage.NET\Linux\x64\libfreeimage-3.17.0.so">
+    <None Include="..\ThirdParty\FreeImage.NET\Linux\x64\libfreeimage-3.17.0.so">
       <Link>libfreeimage-3.17.0.so</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
@@ -408,22 +408,22 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
     </None>
-    <None Include="..\ThirdParty\Dependencies\PVRTexLibNET\Linux\x86\libPVRTexLibWrapper.so">
+    <None Include="..\ThirdParty\PVRTexLibNET\Linux\x86\libPVRTexLibWrapper.so">
       <Link>libPVRTexLibWrapper.so</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
     </None>
-    <None Include="..\ThirdParty\Dependencies\PVRTexLibNET\Linux\x64\libPVRTexLibWrapper.so">
+    <None Include="..\ThirdParty\PVRTexLibNET\Linux\x64\libPVRTexLibWrapper.so">
       <Link>libPVRTexLibWrapper.so</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
     </None>
-    <None Include="..\ThirdParty\Dependencies\PVRTexLibNET\PVRTexLibNET.dll.config">
+    <None Include="..\ThirdParty\PVRTexLibNET\PVRTexLibNET.dll.config">
       <Link>PVRTexLibNET.dll.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>
     </None>
-    <None Include="..\ThirdParty\Dependencies\ATI.TextureConverter\ATI.TextureConverter.dll.config">
+    <None Include="..\ThirdParty\ATI.TextureConverter\ATI.TextureConverter.dll.config">
       <Link>ATI.TextureConverter.dll.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <NativeBinary>True</NativeBinary>

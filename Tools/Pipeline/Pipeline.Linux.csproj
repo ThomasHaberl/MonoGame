@@ -48,31 +48,31 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Xml" />
     <Reference Include="Eto.Forms">
-      <HintPath>..\..\ThirdParty\Dependencies\Eto\Eto.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Eto\Eto.dll</HintPath>
     </Reference>
     <Reference Include="Eto.Gtk">
-      <HintPath>..\..\ThirdParty\Dependencies\Eto\Eto.Gtk.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Eto\Eto.Gtk.dll</HintPath>
     </Reference>
     <Reference Include="AtkSharp">
-      <HintPath>..\..\ThirdParty\Dependencies\Eto\AtkSharp.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Eto\AtkSharp.dll</HintPath>
     </Reference>
     <Reference Include="CairoSharp">
-      <HintPath>..\..\ThirdParty\Dependencies\Eto\CairoSharp.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Eto\CairoSharp.dll</HintPath>
     </Reference>
     <Reference Include="GdkSharp">
-      <HintPath>..\..\ThirdParty\Dependencies\Eto\GdkSharp.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Eto\GdkSharp.dll</HintPath>
     </Reference>
     <Reference Include="GioSharp">
-      <HintPath>..\..\ThirdParty\Dependencies\Eto\GioSharp.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Eto\GioSharp.dll</HintPath>
     </Reference>
     <Reference Include="GLibSharp">
-      <HintPath>..\..\ThirdParty\Dependencies\Eto\GLibSharp.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Eto\GLibSharp.dll</HintPath>
     </Reference>
     <Reference Include="GtkSharp">
-      <HintPath>..\..\ThirdParty\Dependencies\Eto\GtkSharp.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Eto\GtkSharp.dll</HintPath>
     </Reference>
     <Reference Include="PangoSharp">
-      <HintPath>..\..\ThirdParty\Dependencies\Eto\PangoSharp.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Eto\PangoSharp.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Numerics">
       <HintPath>..\..\ThirdParty\Dependencies\NETStandard.Library.NETFramework\net461\System.Runtime.Numerics.dll</HintPath>
