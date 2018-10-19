@@ -54,6 +54,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ThirdParty\CppNet\CppNet.dll</HintPath>
     </Reference>
+    <Reference Include="FreeImageNET, Version=3.15.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\FreeImage.NET\Windows\FreeImageNET.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="SharpDX, Version=2.6.3.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -78,9 +82,6 @@
     </Reference>
     <Reference Include="SharpFont">
       <HintPath>..\ThirdParty\Dependencies\SharpFont\Windows\x64\SharpFont.dll</HintPath>
-    </Reference>
-    <Reference Include="FreeImageNET">
-      <HintPath>..\ThirdParty\Dependencies\FreeImage.NET\Windows\FreeImageNET.dll</HintPath>
     </Reference>
     <Reference Include="PVRTexLibNET">
       <HintPath>..\ThirdParty\Dependencies\PVRTexLibNET\PVRTexLibNET.dll</HintPath>
