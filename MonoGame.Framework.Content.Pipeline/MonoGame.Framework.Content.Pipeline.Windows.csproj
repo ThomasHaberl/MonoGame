@@ -59,6 +59,10 @@
       <HintPath>..\ThirdParty\FreeImage.NET\Windows\FreeImageNET.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Nvidia.TextureTools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\NVTT\Nvidia.TextureTools.dll</HintPath>
+    </Reference>
     <Reference Include="PVRTexLibNET, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ThirdParty\PVRTexLibNET\PVRTexLibNET.dll</HintPath>
@@ -80,9 +84,6 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="AssimpNet">
       <HintPath>..\ThirdParty\Dependencies\assimp\AssimpNet.dll</HintPath>
-    </Reference>
-    <Reference Include="Nvidia.TextureTools">
-      <HintPath>..\ThirdParty\Dependencies\NVTT\Nvidia.TextureTools.dll</HintPath>
     </Reference>
     <Reference Include="SharpFont">
       <HintPath>..\ThirdParty\Dependencies\SharpFont\Windows\x64\SharpFont.dll</HintPath>
