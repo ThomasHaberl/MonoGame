@@ -46,6 +46,10 @@
     <AssemblyOriginatorKeyFile>..\MonoGame.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ATI.TextureConverter, Version=1.0.5522.26319, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty\ATI.TextureConverter\ATI.TextureConverter.dll</HintPath>
+    </Reference>
     <Reference Include="CppNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=972e5365a4cdde39, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ThirdParty\CppNet\CppNet.dll</HintPath>
@@ -80,9 +84,6 @@
     </Reference>
     <Reference Include="PVRTexLibNET">
       <HintPath>..\ThirdParty\Dependencies\PVRTexLibNET\PVRTexLibNET.dll</HintPath>
-    </Reference>
-    <Reference Include="ATI.TextureConverter">
-      <HintPath>..\ThirdParty\Dependencies\ATI.TextureConverter\ATI.TextureConverter.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
